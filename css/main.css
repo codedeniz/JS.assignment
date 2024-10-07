@@ -149,7 +149,7 @@ body::before {
 }
 
 button {
-    background-color: #ffca28; 
+    background-color: #ffffff; 
     color: #006064; 
     border: 2px solid #006064; 
     border-radius: 8px;
@@ -194,7 +194,7 @@ button:active {
     font-weight: bold;
     text-align: center;
     padding: 15px;
-    border: 3px dashed rgba(78, 8, 49, 0.7); /* Semi-transparent border */
+    border: 3px dashed rgba(256, 256, 256, 1); /* Semi-transparent border */
     border-radius: 12px;
     width: 80%;
     min-height: 50px;
