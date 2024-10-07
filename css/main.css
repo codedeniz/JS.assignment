@@ -1,7 +1,6 @@
 @charset "utf-8";
 /* Assignment 1 | COMP1073 Client-Side JavaScript */
 
-
 body {
     font-family: 'Arial', sans-serif;
     background: radial-gradient(circle at 50% 50%, #001f3f 10%, #000000 80%); 
@@ -27,6 +26,7 @@ h1 {
     font-weight: 700;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); 
 }
+
 @keyframes rainbowText {
     0% {
         color: rgb(255, 0, 0); 
@@ -59,16 +59,6 @@ h3 {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); 
     animation: rainbowText 3s linear infinite; 
 }
-h3 {
-    font-size: 1rem;
-    color: #ffffff; 
-    margin-bottom: 30px;
-    text-align: center;
-    font-weight: 700;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); 
-}
-
-
 
 body::before {
     content: '';
@@ -94,7 +84,6 @@ body::before {
         opacity: 0.3;
     }
 }
-
 
 .shooting-star {
     position: absolute;
@@ -122,7 +111,6 @@ body::before {
     }
 }
 
-
 .shooting-star:nth-child(2) {
     animation-delay: 2s;
     left: 10%;
@@ -147,6 +135,33 @@ body::before {
     animation-delay: 10s;
     left: 80%;
 }
+
+button {
+    background-color: transparent; /* Make the button background transparent */
+    color: #006064; 
+    border: 2px solid #006064; 
+    border-radius: 8px;
+    padding: 12px 24px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    animation: floatUpDown 3s ease-in-out infinite; 
+}
+
+button:hover {
+    background-color: rgba(255, 179, 0, 0.6); /* Slightly transparent background on hover */
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    background-color: rgba(255, 160, 0, 0.8); /* Slightly transparent background when active */
+    transform: translateY(1px);
+    box-shadow: none;
+}
+
 @keyframes floatUpDown {
     0% {
         transform: translateY(0px);
@@ -179,7 +194,6 @@ body::before {
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.25);
 }
 
-
 @media only screen and (max-width: 600px) {
     button {
         font-size: 1rem;
@@ -196,7 +210,6 @@ body::before {
     }
 }
 
-
 body.light-mode {
     background-color: #f5f5f5;
     transition: background-color 0.3s ease-in-out;
@@ -212,36 +225,11 @@ button.dark-mode {
     color: #004d40;
     border-color: #004d40;
 }
-button {
-    background-color: transparent; /* Make the button background transparent */
-    color: #ffffff; /* Change text color to ensure it's visible */
-    border: 2px solid #ffffff; /* Keep the border visible */
-    border-radius: 8px;
-    padding: 12px 24px;
-    margin: 10px;
-    cursor: pointer;
-    font-size: 1.1rem;
-    font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    animation: floatUpDown 3s ease-in-out infinite; 
-}
-
-button:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Add a semi-transparent background on hover */
-    transform: translateY(-2px);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-button:active {
-    background-color: rgba(255, 255, 255, 0.4); /* Change active state background to semi-transparent */
-    transform: translateY(1px);
-    box-shadow: none;
-}
 
 #portfolioButton {
-    background: transparent; /* Make the portfolio button background transparent */
-    color: #ffffff; /* Change text color to ensure it's visible */
-    border: 2px solid #ffffff; /* Keep the border visible */
+    background: linear-gradient(135deg, #ffca28, #ffb300); 
+    color: #006064; 
+    border: none;
     border-radius: 8px;
     padding: 12px 24px;
     margin: 10px;
@@ -250,32 +238,16 @@ button:active {
     font-weight: 600;
     transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.3s ease;
     position: relative; 
-    overflow: hidden; 
-}
-
-#portfolioButton::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background for hover effect */
-    border-radius: 8px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-#portfolioButton:hover::before {
-    opacity: 1; 
+    z-index: 1; 
 }
 
 #portfolioButton:hover {
-    transform: translateY(-3px); 
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); 
+    background: linear-gradient(135deg, #ffd54f, #ffb300); 
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 #portfolioButton:active {
-    transform: translateY(1px); 
-    box-shadow: none; 
+    transform: translateY(1px);
+    box-shadow: none;
 }
