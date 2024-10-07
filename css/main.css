@@ -149,8 +149,8 @@ body::before {
 }
 
 button {
-    background-color: rgba(256, 256, 256, 1); ; 
-    color: rgba(256, 256, 256, 1);  
+    background-color: rgba(256, 256, 256, 0); ; 
+    color: rgba(0, 0, 0, 1);  
     border: 2px solid #006064; 
     border-radius: 8px;
     padding: 12px 24px;
